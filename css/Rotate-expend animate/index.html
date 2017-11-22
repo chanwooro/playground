@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <style>
+            body{
+                width: 80%;
+                margin: 0 auto;
+                background: #000;
+            }
+            div{
+                margin:10px;
+                font-family: 'Roboto Slab', serif;
+                color:#fff;
+            }
+            #rotator{
+                display:inline-block;
+                border: 1px #fff solid;
+                transform: rotateZ(45deg);
+                -webkit-transform: rotateZ(45deg);
+                transition: all 0.5s ease-in-out 0.8s;
+                 -webkit-transition: all 0.5s ease-in-out 0.8s;
+                /*animation: rotate 2s infinite;*/
+            }
+            #rotator:hover{
+                transform: rotateZ(0deg);
+                -webkit-transform: rotateZ(0deg);
+                transition: all 0.5s ease-in-out 0.2s;
+                -webkit-transition: all 0.5s ease-in-out 0.2s;
+                /*animation: none;*/
+            }
+            #expender{
+                padding:20px;
+                width:0;
+                transition: all 1s ease-in-out;
+                -webkit-transition: all 1s ease-in-out;
+            }
+            #rotator:hover #expender{
+                transition: all 1s ease-in-out 1s;
+                -webkit-transition: all 1s ease-in-out 1s;
+                width:120px !important; 
+            }
+            .name_text{
+                position: relative;
+                margin: 0 auto;
+                bottom: 52px;
+                margin-left:18px;
+                margin-right:18px;
+                z-index:-1;
+                letter-spacing:0;
+                -webkit-transition: all 0.8s ease-in;
+                -moz-transition: all 0.8s ease-in;
+                -ms-transition: all 0.8s ease-in;
+                -o-transition: all 0.8s ease-in;
+                transition: all 0.8s ease-in;
+            }
+            #rotator:hover ~ .name_text{
+                letter-spacing: 15px;
+                -webkit-transition: all 0.9s ease-in 1s;
+                -moz-transition: all 0.9s ease-in 1s;
+                -ms-transition: all 0.9s ease-in 1s;
+                -o-transition: all 0.9s ease-in 1s;
+                transition: all 0.9s ease-in 1s;
+            }
+            .name{
+                letter-spacing:2px !important;
+                position:absolute;
+                margin-left: 13px;
+                opacity:0;
+                -webkit-transition: all 0.5s ease-in;
+                -moz-transition: all 0.5s ease-in;
+                -ms-transition: all 0.5s ease-in;
+                -o-transition: all 0.s ease-in;
+                transition: all 0.5s ease-in;
+            }
+            #rotator:hover ~ .name_text > span.name{
+                
+                -webkit-transition: all 0.5s ease-in 2s;
+                -moz-transition: all 0.5s ease-in 2s;
+                -ms-transition: all 0.5s ease-in 2s;
+                -o-transition: all 0.5s ease-in 2s;
+                transition: all 0.5s ease-in 2s;
+                opacity:1;
+            }
+            span.first_margin{
+                letter-spacing: 0 !important;
+                -webkit-transition: all 0.5s ease-in;
+                -moz-transition: all 0.5s ease-in;
+                -ms-transition: all 0.5s ease-in;
+                -o-transition: all 0.5s ease-in;
+                transition: all 0.5s ease-in;
+
+            }
+            #rotator:hover ~ .name_text > span.first_margin{
+                letter-spacing: 32px !important;
+                -webkit-transition: all 0.5s ease-in 1s;
+                -moz-transition: all 0.5s ease-in 1s;
+                -ms-transition: all 0.5s ease-in 1s;
+                -o-transition: all 0.5s ease-in 1s;
+                transition: all 0.5s ease-in 1s;
+
+            }
+            @-webkit-keyframes rotate {
+                0% {
+                    transform: rotateZ(45deg);
+                    -webkit-transform: rotateZ(45deg);
+                }
+                25% {
+                    transform: rotateZ(60deg);
+                    -webkit-transform: rotateZ(60deg);
+                }
+                50%{
+                    transform: rotateZ(5deg);
+                    -webkit-transform: rotateZ(55deg);
+                }
+                75%{
+                    transform: rotateZ(55deg);
+                    -webkit-transform: rotateZ(55deg);
+                }
+                100% {
+                    transform: rotateZ(45deg);
+                    -webkit-transform: rotateZ(45deg);
+                }
+            }
+            @keyframes rotate {
+                0% {
+                    transform: rotateZ(45deg);
+                    -webkit-transform: rotateZ(45deg);
+                }
+                25% {
+                    transform: rotateZ(60deg);
+                    -webkit-transform: rotateZ(60deg);
+                }
+                50%{
+                    transform: rotateZ(5deg);
+                    -webkit-transform: rotateZ(55deg);
+                }
+                75%{
+                    transform: rotateZ(55deg);
+                    -webkit-transform: rotateZ(55deg);
+                }
+                100% {
+                    transform: rotateZ(45deg);
+                    -webkit-transform: rotateZ(45deg);
+                }
+            }
+        </style>
+    </head>    
+    <body>
+        <div style="margin-bottom:150px;"></div>
+        <div style="text-align:center; position:relative;" id="wrapper">
+            <div id="logo_name">
+                <div id="rotator">
+                    <div id="expender">
+            
+                    </div>
+                </div>
+                <div class="name_text">
+                    
+                    <span class="name">
+                            han
+                    </span>
+                    <span class="first_margin">C</span>
+                    
+                    <span class="name" style="margin-left:16px;">
+                            oo
+                    </span>
+                    <span>W</span>
+                    
+                    <span class="name">
+                            o
+                    </span>
+                    <span>R</span>
+                </div>
+            </div>
+            <div>
+                test alignment and position
+
+            </div>
+        </div>
+        
+    </body>    
+
+
+</html>
